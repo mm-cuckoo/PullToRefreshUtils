@@ -80,9 +80,6 @@ public class PullToRefreshLayout extends FrameLayout {
      */
     private float downY, lastY;
 
-    /** 按下X坐标，上一个事件点X坐标*/
-    private float downX, lastX;
-
     /**
      * 下拉的距离。注意：pullDownY和pullUpY不可能同时不为0
      */
@@ -256,11 +253,6 @@ public class PullToRefreshLayout extends FrameLayout {
         initView(context);
     }
 
-//    public PullToRefreshLayout(Context context, AttributeSet attrs, int defStyle) {
-//        super(context, attrs, defStyle);
-//        initView(context);
-//    }
-
     private void initView(Context context) {
         mContext = context;
         timer = new MyTimer(updateHandler);
@@ -418,10 +410,8 @@ public class PullToRefreshLayout extends FrameLayout {
         switch (ev.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:
                 downY = ev.getY();
-                downX = ev.getX();
-
                 lastY = downY;
-                lastX = downX;
+
                 timer.cancel();
                 mEvents = 0;
                 releasePull();
@@ -432,8 +422,6 @@ public class PullToRefreshLayout extends FrameLayout {
                 mEvents = -1;
                 break;
             case MotionEvent.ACTION_MOVE:
-
-                if (Math.abs(lastY - ev.getY()) / Math.abs(lastX - ev.getX()) < 1) break;
 
                 if (mEvents == 0) {
                     if (pullDownY > 0 || (((Pullable) pullableView).canPullDown() && canPullDown && state != LOADING)) {

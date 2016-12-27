@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PullToRefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/PullToRefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PullToRefresh/PullToRefresh.iml" filepath="$PROJECT_DIR$/PullToRefresh/PullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/PullToRefreshAll/PullToRefreshAll.iml" filepath="$PROJECT_DIR$/PullToRefreshAll/PullToRefreshAll.iml" />
       <module fileurl="file://$PROJECT_DIR$/PullToRefreshUtils.iml" filepath="$PROJECT_DIR$/PullToRefreshUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>
